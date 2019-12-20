@@ -1,0 +1,11 @@
+<h1>Directions to the nearest Alternative Fuel Station</h1>
+
+<p>Station Name: <%= results.fuel_location[:fuel_stations].first[:station_name] %></p>
+<p>Station Address: <%= results.fuel_location[:fuel_stations].first[:street_address] %></p>
+<p>Station Fuel Type: <%= results.fuel_location[:fuel_stations].first[:fuel_type_code] %></p>
+<p>Station Access Time: <%= results.fuel_location[:fuel_stations].first[:access_days_time] %></p>
+<br>
+<p>Distance is <%= results.map_directions[:routes].first[:legs].first[:distance][:text] %></p>
+<p>Travel Time is <%= results.map_directions[:routes].first[:legs].first[:duration][:text] %></p>
+<br>
+<p> <%= results.map_directions[:routes].first[:legs].first[:steps].first[:html_instructions] %> </p>
