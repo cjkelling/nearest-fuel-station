@@ -1,3 +1,7 @@
 class SearchController < ApplicationController
-  def index; end
+  def index
+    render locals: {
+      results: Search.new(params[:location])
+    }
+  end
 end
